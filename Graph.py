@@ -1,3 +1,8 @@
+#   The purpose of this code is to pull the data from the forms created in Kobotool box
+#   and then use it to create things like a csv file or turn it into a pandas data frame that 
+#   that can be used to product graphs 
+
+
 import os
 import pandas as pd
 import requests
