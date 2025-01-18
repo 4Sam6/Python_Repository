@@ -92,19 +92,21 @@ result = pd.DataFrame(transformed_rows)
 result['Male'] = pd.to_numeric(result['Male'], errors='coerce')
 result['Female'] = pd.to_numeric(result['Female'], errors='coerce')
 
+
+#   This creates a time stamp that shows when the file was made
+current_date = pd.Timestamp.now().strftime("%Y-%m-%d")
 #   This will plot the lmplot chart 
 
 sns.set_theme()
 g = sns.lmplot(
     data = result,
     x="Male", y="Female", hue="Type of Bird",
-    height=5
+    height=5,
+    palette = "colorblind",
+    markers=["o", "s", "D","v","x","+"]
 )
-plt.savefig(f"{OUTPUT_DIR}/birdlmr.png")# This OUTPUT_DIR was made for use with .gitingore 
+plt.savefig(f"{OUTPUT_DIR}/birdlmr/{current_date}.png")# This OUTPUT_DIR was made for use with .gitingore 
 
 
-
-
-
-current_date = pd.Timestamp.now().strftime("%Y-%m-%d")
-bird_df.to_csv(f"{OUTPUT_DIR}/bird_data{current_date}.csv", index=False)
+#   This saves the dataframe as a csv file 
+bird_df.to_csv(f"{OUTPUT_DIR}/bird_data/{current_date}.csv", index=False)
