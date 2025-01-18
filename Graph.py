@@ -105,8 +105,8 @@ g = sns.lmplot(
     palette = "colorblind",
     markers=["o", "s", "D","v","x","+"]
 )
-plt.savefig(f"{OUTPUT_DIR}/birdlmr/{current_date}.png")# This OUTPUT_DIR was made for use with .gitingore 
+plt.savefig(f"{OUTPUT_DIR}/birdlmr{current_date}.png")# This OUTPUT_DIR was made for use with .gitingore 
 
 
 #   This saves the dataframe as a csv file 
-bird_df.to_csv(f"{OUTPUT_DIR}/bird_data/{current_date}.csv", index=False)
+bird_df.to_csv(f"{OUTPUT_DIR}/bird_data{current_date}.csv", index=False)
