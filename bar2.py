@@ -1,4 +1,6 @@
-# this produces a simple graph that shows all the the results of the survey 
+#This will create a graph that has a bar for the male totals and a bar for the female totals
+
+#This version didnt have a copy so description so I have now included one
 
 
 import os
@@ -81,6 +83,6 @@ plt.title('Totals of Gender')
 # Show the plot
 plt.xticks(rotation=0)
 plt.show()
+#
 
-
-plt.savefig(f"{OUTPUT_DIR}/bird_total_bar{current_date}.png")# This OUTPUT_DIR was made for use with .gitingore 
+plt.savefig(f"{OUTPUT_DIR}/bird__total__bar{current_date}.png")# This OUTPUT_DIR was made for use with .gitingore 
