@@ -80,4 +80,4 @@ plt.xticks(rotation=0)
 plt.show()
 
 
-plt.savefig(f"{OUTPUT_DIR}/birdtotalbar{current_date}.png")# This OUTPUT_DIR was made for use with .gitingore 
+plt.savefig(f"{OUTPUT_DIR}/bird__total__bar{current_date}.png")# This OUTPUT_DIR was made for use with .gitingore 
